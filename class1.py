@@ -14,6 +14,8 @@ class Person:
 #2)인스턴스를  생성 
 p1 = Person() 
 p2 = Person()
+p3 = Person() 
+
 print("인스턴스 갯수:",  Person.num_person)
 
 
