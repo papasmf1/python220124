@@ -37,3 +37,43 @@ for item in lst:
     print("Item:{0}".format(item))
 
 print("---for in루프 종료---")
+
+#리스트 함축(리스트 내장)
+print("---리스트 함축---")
+lst = [1,2,3,4,5,6,7,8,9,10]
+result = [i**2 for i in lst if i > 5]
+print(result)
+
+tp = ("apple", "kiwi")
+print( [len(i) for i in tp] )
+
+d = {100:"apple", 200:"banana"}
+print( [v.upper() for v in d.values()] )
+
+#수열함수
+print( list(range(10)) )
+print( list(range(5,10)) )
+print( list(range(2000,2023)) )
+print( list(range(1,101)) )
+print( tuple(range(1,101)) )
+print( set(range(1,101)) )
+
+#수동으로 루프 5번 돌기 
+for i in range(10):
+    print(i)
+
+#필터링하는 경우
+lst = [10, 25, 30]
+#함수를 정의
+def getBiggerThan20(i):
+    #논리식을 리턴 
+    return i>20
+
+print("---필터링---")
+iterL = filter(getBiggerThan20, lst)
+for item in iterL:
+    print(item)
+
+
+
+
