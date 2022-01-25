@@ -31,9 +31,13 @@ print(connectURI(port="80",server="naver.com"))
 
 #가변인자 
 def union(*ar): 
+    #지역변수
     result = []
+    #단어를 자르기 
     for item in ar:
+        #글자를 자르기 
         for x in item:
+            #없으면 추가 
             if x not in result:
                 result.append(x)
     return result 
