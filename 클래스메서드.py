@@ -1,6 +1,7 @@
 # 클래스메서드.py
 class CoeffVar(object):
     coefficient = 1 
+    #클래스메서드(상속의 대상, cls)
     @classmethod
     def mul(cls, fact):
         return cls.coefficient * fact 
