@@ -32,7 +32,7 @@ for n in range(0,10):
                         item2 = item.find("a")
                         title = item2.text 
                         #print(title) 
-                        if (re.search('대한민국', title)):
+                        if (re.search('천주교', title)):
                                 print(title.strip())
                                 f.write(title.strip() + "\n")
                 except:
