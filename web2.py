@@ -22,7 +22,15 @@ link = cartoons[0].find("a")["href"]
 print(title)
 print(link)
 
+#파일로 저장(첨부연산): wt, a+ 
+f = open("c:\\work\\webtoon.txt", "wt", encoding="utf-8")
 for item in cartoons:
     title = item.find("a").text.strip()
     print(title)
+    f.write(title + "\n")
+
+print("웹툰 크롤링 종료")
+f.close() 
+
+
 
