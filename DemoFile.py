@@ -21,6 +21,18 @@ f.close()
 
 #파일을 읽기
 f = open("c:\\work\\demo.txt", "rt", encoding="utf-8")
-result = f.read() 
+#str변수로 한번에 읽기 
+print( f.read() ) 
+print( f.tell() )
+f.seek(0)
+print("---readlines()---")
+print( f.readlines() )
+f.seek(0)
+print("---readline()---")
+print( f.readline() )
+print( f.readline() )
+
 f.close() 
-print(result)
+
+
+
