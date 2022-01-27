@@ -14,3 +14,13 @@ print("{0:f}".format(4/3))
 print("{0:.2f}".format(4/3))
 print("{0:,}".format(15000))
 
+#파일에 쓰기(유니코드로 읽기와쓰기) 
+f = open("c:\\work\\demo.txt", "wt", encoding="utf-8")
+f.write("첫줄\n두번째라인\n세번째\n")
+f.close() 
+
+#파일을 읽기
+f = open("c:\\work\\demo.txt", "rt", encoding="utf-8")
+result = f.read() 
+f.close() 
+print(result)
