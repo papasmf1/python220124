@@ -11,6 +11,7 @@ hdr = {'User-agent':'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) Appl
 for n in range(0,10):
         #클리앙의 중고장터 주소 
         data ='https://www.clien.net/service/board/sold?&od=T31&po=' + str(n)
+        print(data)
         #웹브라우져 헤더 추가 
         req = urllib.request.Request(data, \
                                     headers = hdr)
@@ -20,15 +21,14 @@ for n in range(0,10):
         page = data.decode('utf-8', 'ignore')
         soup = BeautifulSoup(page, 'html.parser')
 
-        # <span class="subject_fixed">
+        # <span class="subject_fixed" data-role="list-title-text" title="아이폰 13 128GB 미드나이트">
         # 	아이폰 13 128GB 미드나이트
-	# </span>
+        # </span>
         # 특정 조건이 있는 필터링: attributes(속성들)
-        list = soup.find_all('span', attrs={'class':'subject_fixed'})
-
+        list = soup.find_all('span', attrs={'data-role':'list-title-text'})
         for item in list:
                 try:
-                        title = item.text.strip()
+                        title = item.text
                         print(title) 
                         # if (re.search('아이폰', title)):
                         #         print(title.strip())
