@@ -12,6 +12,21 @@ for name in names:
 strA = "python is very powerful"
 print( len(strA) )
 print( strA.capitalize() )
+print( strA.upper() )
 print( strA.count("p") )
 print( strA.count("p",7) )
+print( "MBC2580".isalnum() )
+print( "MBC:2580".isalnum() )
+print( "2580".isdecimal() )
+print( "demo.ppt".endswith("ppt") )
+
+#웹에서 또는 텍스트파일에서 문자열을 읽어오는 경우(전처리)
+strB = "<<<  spam and ham  >>>"
+print("---공백문자---")
+print(strB)
+#앞뒤에 불필요한 문자들을 나열해서 제거 
+result = strB.strip("<> ")
+print(result)
+
+
 
