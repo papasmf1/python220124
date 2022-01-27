@@ -27,6 +27,15 @@ print(strB)
 #앞뒤에 불필요한 문자들을 나열해서 제거 
 result = strB.strip("<> ")
 print(result)
+#치환
+result2 = result.replace("spam", "spam egg")
+print(result2)
+print("---리스트로받기---")
+lst = result2.split() 
+print(lst)
+print("---하나로 합치기---")
+print(" ".join(lst))
+
 
 
 
