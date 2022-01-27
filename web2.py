@@ -9,14 +9,20 @@ data = urllib.request.urlopen("http://comic.naver.com/webtoon/list.nhn?titleId=2
 
 #전체문서에서 검색 
 # <td class="title">
-#     <a href="/webtoon/detail?titleId"">마음의 소리 50화 <격렬한 나의 하루> </a>
+#     <a href="/webtoon/detail?titleId">마음의 소리 50화 <격렬한 나의 하루> </a>
 # </td>
 soup = BeautifulSoup(data, "html.parser")
 #필요한 태그만 검색: <td class="title"> 10개를 가져오기 
 cartoons = soup.find_all("td", class_="title")
 #1개만 검색 
 print("갯수:{0}".format( len(cartoons)) )
+#슬라이싱을 해서 첫번째만 가져오기 
 title = cartoons[0].find("a").text 
 link = cartoons[0].find("a")["href"]
 print(title)
 print(link)
+
+for item in cartoons:
+    title = item.find("a").text.strip()
+    print(title)
+
